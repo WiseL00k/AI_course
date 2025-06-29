@@ -105,8 +105,8 @@ class MainWindow(QMainWindow):
         
         # 模型选择
         self.model_combo = QComboBox()
-        self.model_combo.addItem("全连接网络")
-        self.model_combo.addItem("卷积网络")
+        self.model_combo.addItem("全连接神经网络")
+        self.model_combo.addItem("卷积神经网络")
         control_panel.addWidget(QLabel("选择模型:"))
         control_panel.addWidget(self.model_combo)
         self.model_combo.currentTextChanged.connect(self.on_model_changed)
