@@ -11,6 +11,18 @@
 pip install -r ./requirements.txt
 ```
 
+注意：若要使用Cuda显卡并行加速训练，需要额外安装Cuda，本机采用12.1
+
+同时安装torch包要按照GPU版本，否则无法使用Cuda进行并行加速训练。
+
+安装Cuda过程可参考[英伟达DUDA12.1在Windows11环境下配置CUDAToolkit教程](https://blog.csdn.net/zr2006_7/article/details/130668902)
+
+同时安装GPU版本的torch包，则可使用如下命令进行安装：
+
+```
+pip install torch==2.5.1+cu121 -f https://mirrors.aliyun.com/pytorch-wheels/cu121
+```
+
 ## 文件结构
 
 `main.py`为**全连接神经网络**模型识别手写数字训练代码
