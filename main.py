@@ -25,7 +25,7 @@ class Net(torch.nn.Module):
 def get_data_loader(is_train):
     to_tensor = transforms.Compose([transforms.ToTensor()])
     data_set = MNIST(root='mnist_data/', train=is_train, download=True, transform=to_tensor)
-    return DataLoader(data_set, batch_size=15, shuffle=True, pin_memory=True)
+    return DataLoader(data_set, batch_size=32, shuffle=True, pin_memory=True)
 
 def evaluate(test_data, net):
     net.eval()    

@@ -46,7 +46,7 @@ def get_data_loader(is_train):
         transforms.Normalize((0.1307,), (0.3081,))
     ])
     dataset = MNIST(root='mnist_data/', train=is_train, download=True, transform=transform)
-    return DataLoader(dataset, batch_size=16, shuffle=True, pin_memory=True)
+    return DataLoader(dataset, batch_size=32, shuffle=True, pin_memory=True)
 
 def evaluate(test_data, net):
     net.eval()
